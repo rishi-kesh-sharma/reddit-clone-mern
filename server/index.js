@@ -1,8 +1,10 @@
-const app = require('./app');
-const http = require('http');
-const { PORT } = require('./utils/config');
-const connectToDB = require('./db');
+const app = require("./app");
+const http = require("http");
+const { PORT } = require("./utils/config");
+const connectToDB = require("./db");
+const dotenv = require("dotenv");
 
+dotenv.config();
 connectToDB();
 
 const server = http.createServer(app);
